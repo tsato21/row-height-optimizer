@@ -5,7 +5,7 @@ title: 'Automate Adjusting Row Heights in Google Sheet'
 
 ## About this Project
 
-This project uses Google Apps Script that automates adjusting row heights in Google Sheet based on contents. Row height can automatically be adjusted by Google Sheets' built-in function, `Resize row => Fit to data`, but this function results in rows with single lines having very small row heights. This can make the content difficult to read and interact with. Additionally, this function does not provide any padding at the top and bottom of the cell, which can lead to a cramped and visually unappealing spreadsheet.
+This project uses Google Apps Script that automates adjusting row heights in Google Sheet based on contents. In fact, row height can automatically be adjusted by Google Sheets' built-in function, `Resize row` => `Fit to data`. However, as shown in the screenshots below, this function results in rows with single lines having very small row heights and multiple lines not providing any padding at the top and bottom of the cell, which can lead to a cramped and visually unappealing spreadsheet.
 <div style="margin-left: 30px">
   <img src="assets/images/fit-to-data-feature.png" alt="Image of Fit to Data Feature" width="400" height="200">
 </div>
@@ -14,7 +14,8 @@ This project uses Google Apps Script that automates adjusting row heights in Goo
   <img src="assets/images/fit-to-data-result.png" alt="Image of Fit to Data Result" width="400" height="200">
 </div>
 
-Manually resizing each row to fit its content is a potential solution, but this can be a time-consuming process, especially for large spreadsheets. This project automates this process, saving users valuable time and ensuring a consistent, readable, and aesthetically pleasing row height throughout the spreadsheet. It adjusts the row height based on the content of each cell, and also adds some space to the top and bottom for better readability and visual appeal.
+Manually resizing each row to fit its content is a potential solution. Still, this can be a time-consuming process, especially for many rows and spreadsheets to deal with. 
+This project automates this process, saving users valuable time and ensuring a consistent, readable, and aesthetically pleasing row height throughout the spreadsheet. It adjusts the row height based on the content of each cell and also adds some space to the top and bottom for better readability and visual appeal.
 
 ## Prerequisites
 
