@@ -20,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/tsato21/row-height-optimizer/issues"
   },
-  "homepage": "http://localhost:3000/scripts-showcase/gas-tools/each-tool/row-height-optimizer",
+  "homepage": "https://tsato21.github.io/scripts-showcase/gas-tools/each-tool/row-height-optimizer",
   "devDependencies": {
     "@google/clasp": "^2.4.2",
     "@types/google-apps-script": "^1.0.64",
