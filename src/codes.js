@@ -1,5 +1,5 @@
 // Average character width (adjusted for Times New Roman, size 10)
-const AVG_CHART_WIDTH = 4.5; 
+const AVG_CHART_WIDTH = 4.5;
 const BASE_HEIGHT = 25; // Base height for a single line
 const ADDITIONAL_HEIGHT_PER_LINE = 20; // Additional height per line
 
@@ -20,39 +20,53 @@ function onOpen() {
  */
 function showAuthorizationDialog() {
   let ss = SpreadsheetApp.getActiveSpreadsheet();
-  Browser.msgBox('Authorization has been granted. You can now use the script functionalities.', Browser.Buttons.OK);
+  Browser.msgBox(
+    'Authorization has been granted. You can now use the script functionalities.',
+    Browser.Buttons.OK
+  );
 }
 // Function to adjust the heights of rows in a Google Sheet based on the content
 function adjustRowHeights() {
-  let sheetName = Browser.inputBox('Please input the sheet name',Browser.Buttons.OK);
+  let sheetName = Browser.inputBox(
+    'Please input the sheet name',
+    Browser.Buttons.OK
+  );
   // Get the specific sheet from the active spreadsheet
   let sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(sheetName);
-  if(!sheet){
-    Browser.msgBox("Invalid sheet name. Try again.");
+  if (!sheet) {
+    Browser.msgBox('Invalid sheet name. Try again.');
     return;
   }
   let lastRowIndex = sheet.getLastRow();
   let lastColIndex = sheet.getLastColumn();
-  
+
   // Prompt user to input the starting row number
-  let startRowInput = Browser.inputBox("Input the number of the starting row.)", Browser.Buttons.OK);
+  let startRowInput = Browser.inputBox(
+    'Input the number of the starting row.)',
+    Browser.Buttons.OK
+  );
   let startRow = parseInt(startRowInput, 10);
 
   // Check if the input is a valid number
   if (isNaN(startRow)) {
-      Browser.msgBox("Please enter a valid number.");
-      return;
+    Browser.msgBox('Please enter a valid number.');
+    return;
   }
 
   // Define the range of data to adjust row heights for
-  let dataRange = sheet.getRange(startRow, 1, lastRowIndex - startRow + 1, lastColIndex);
+  let dataRange = sheet.getRange(
+    startRow,
+    1,
+    lastRowIndex - startRow + 1,
+    lastColIndex
+  );
   let data = dataRange.getValues(); // Get the data as a 2D array
   let columnWidths = getColumnWidths_(sheet, lastColIndex);
 
   // Iterate over each row in the data
-  data.forEach(function(row, rowIndex) {
+  data.forEach(function (row, rowIndex) {
     // Calculate the line count for each cell in the row
-    let lineCounts = row.map(function(cell, colIndex) {
+    let lineCounts = row.map(function (cell, colIndex) {
       return estimateLineCount_(cell, columnWidths[colIndex]);
     });
 

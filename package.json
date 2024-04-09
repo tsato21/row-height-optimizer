@@ -1,13 +1,9 @@
 {
-  "name": "gas-template",
+  "name": "row-height-optimizer",
   "version": "1.0.0",
-  "description": "A personal template repository for creating a local dev environment using Google Apps Script, clasp, and github page",
-  "main": "src/sample.js",
-  "directories": {
-    "test": "tests"
-  },
+  "description": "Automates the adjustment of row heights in Google Sheets, enhancing readability and visual appeal by providing adequate padding for cell contents.",
   "scripts": {
-    "test": "jest"
+    "format": "prettier --write src/**/*"
   },
   "repository": {
     "type": "git",
