@@ -1,2 +1,2 @@
 # Row Height Optimizer
-This repository showcases a Google Apps Script tool for optimizing row heights of Google Sheet manuals. You can see details at [Row Height Optimizer](https://tsato21.github.io/scripts-showcase/gas-tools/each-tool/row-height-optimizer).
+This repository showcases a Google Apps Script tool for optimizing row heights of Google Sheet manuals. You can see details at [Row Height Optimizer](https://tsato21.github.io/gas-tools/each-tool/row-height-optimizer).
